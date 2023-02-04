@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>CV - [Nom complet]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    
+    <title>CV - [Ismail Helali]</title>
     <style>
 /* General styles */
 body {
@@ -93,56 +97,69 @@ footer p {
     </style>
   </head>
   <body>
+
+  
     <!-- En-tête -->
     <header>
       <h1>Ismail Helali</h1>
-      <p>Ingénieur d'État Génie Industriel et Développeur Web</p>
+      <nav>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
-    <!-- Section principale -->
+    <!-- Contenu principal -->
     <main>
-      <!-- Formation -->
-      <h2>Formation</h2>
-      <ul>
-        <li>
-          <strong>2018:</strong> Diplôme d'Ingénieur d'État Génie Industriel, École Supérieure des Industries de Textile et Habillement
-        </li>
-        <li>
-          <strong>2014:</strong> Licence professionnelle en Supply Chain Management, École Supérieure des Industries de Textile et Habillement
-        </li>
-        <li>
-          <strong>2008:</strong> Baccalauréat Science Mathématiques A, Lycée Tarik Ibn Ziad Azrou
-        </li>
-      </ul>
-      <!-- Expérience professionnelle -->
-      <h2>Expérience professionnelle</h2>
-      <ul>
-        <li>
-          <strong>Depuis 2018:</strong> Ingénieur Achat et Amélioration Continue, SOLIDERNET SARL (Temara, Maroc)
-        </li>
-        <li>
-          <strong>Depuis 2018:</strong> Développeur Web
-        </li>
-      </ul>
-      <!-- Compétences -->
-      <h2>Compétences</h2>
-      <ul>
-        <li>Amélioration continue</li>
-        <li>Gestion de la chaîne d'approvisionnement</li>
-<li>Développement web</li>
-<li>Mathematiques appliquées</li>
-<li>Analyse et résolution de problèmes</li>
-<li>Gestion de la maintenance</li>
-<li>Gestion d'approvisionnement</li>
-<li>Gestion de Production</li>
-<li>Gestion des Achats et sourcing</li>
-<li>Négociation</li>
-<li>Programmation : JavaScript, HTML5, CSS,PYTHON, MySQL</li>
-</ul>
+      <!-- À propos -->
+      <section id="about">
+        <h2>À propos</h2>
+        <p>Je suis un ingénieur d'état en Génie Industriel diplômé en 2018 de l'École Supérieure des Industries de Textile et Habillement. J'ai également obtenu une Licence professionnelle en Supply Chain Management de la même école en 2014 et un Baccalauréat en Sciences Mathématiques en 2008. Je travaille actuellement en tant qu'Ingénieur Achat et Amélioration Continue chez SOLIDERNET SARL à Temara au Maroc et en tant que Développeur Web à temps partiel.</p>
+      </section>
+      <!-- Services -->
+      <section id="services">
+        <h2>Services</h2>
+        <ul>
+          <li>Génie industriel</li>
+          <li>Supply Chain Management</li>
+          <li>Développement web</li>
+          <li>Mathématiques appliquées</li>
+          <li>Analyse et résolution de problèmes</li>
+        </ul>
+      </section>
+      <!-- Projets -->
+      <section id="projects">
+        <h2>Projets</h2>
+        <div class="item">
+          <img src="project1.jpg" alt="Projet 1">
+          <p>Description du projet 1</p>
+        </div>
+        <div class="item">
+          <img src="project2.jpg" alt="Projet 2">
+          <p>Description du projet 2</p>
+        </div>
+        <div class="item">
+          <img src="project3.jpg" alt="Projet 3">
+          <p>Description du projet 3</p>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact">
+<h2>Contact</h2>
+<form action="submit-form.php" method="post">
+<label for="nom">Nom:</label>
+<input type="text" id="nom" name="nom">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<label for="message">Message:</label>
+<textarea id="message" name="message"></textarea>
+<input type="submit" value="Envoyer">
+</form>
+</section>
 </main>
 <!-- Pied de page -->
 <footer>
-ISMAIL HELALI - ismail.helali@esith.net - +212662726274
+<p>© Ismail Helali 2023</p>
 </footer>
-
-  </body>
+</body>
 </html>
