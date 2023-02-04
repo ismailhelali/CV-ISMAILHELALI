@@ -4,44 +4,92 @@
     <meta charset="UTF-8">
     <title>CV - [Nom complet]</title>
     <style>
-      /* Mise en forme générale */
-      body {
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.5;
-      }
-      /* En-tête */
-      header {
-        padding: 10px 0;
-        text-align: center;
-      }
-      header h1 {
-        margin: 0;
-      }
-      /* Section principale */
-      main {
-        padding: 20px;
-      }
-      /* Titres de section */
-      h2 {
-        font-size: 16px;
-        margin-top: 20px;
-        text-transform: uppercase;
-      }
-      /* Liste de compétences */
-      ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      /* Mise en forme du pied de page */
-      footer {
-        font-size: 12px;
-        text-align: center;
-      }
+/* General styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flexbox container for header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+  transition: color 0.2s ease-out;
+}
+
+header nav a:hover {
+  color: #ddd;
+}
+
+/* CSS grid for main content */
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* Responsive styles using media queries */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom font for section headers */
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Image hover effect */
+.item img {
+  width: 100%;
+  transition: transform 0.2s ease-out;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
     </style>
   </head>
   <body>
