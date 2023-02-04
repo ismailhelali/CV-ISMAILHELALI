@@ -146,15 +146,21 @@ footer p {
       <!-- Contact -->
       <section id="contact">
 <h2>Contact</h2>
-<form action="submit-form.php" method="post">
-<label for="nom">Nom:</label>
-<input type="text" id="nom" name="nom">
-<label for="email">Email:</label>
-<input type="email" id="email" name="email">
-<label for="message">Message:</label>
-<textarea id="message" name="message"></textarea>
-<input type="submit" value="Envoyer">
-</form>
+
+  <h3>Pour toute demande, n'hésitez pas à nous contacter.</h3>
+    <div class="contactform">
+        <form id="myForm">
+  <input type="text" placeholder="Nom et prénom" name="name"><br>
+  <input type="email" placeholder="Votre Email" name="email"><br>
+  <input type="tel" placeholder="Numéro de téléphone" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+  <label for="message">Votre Message</label><br>
+  <textarea name="message"></textarea><br>
+  
+
+   <input class="button" type="button" value="Envoyer" onclick="submitForm() ; clearForm()">
+        </form>
+    </div>
+
 </section>
 </main>
 <!-- Pied de page -->
@@ -163,3 +169,41 @@ footer p {
 </footer>
 </body>
 </html>
+<script>
+function clearForm() {
+    document.getElementById("myForm").reset();
+}  
+  
+  
+function submitForm() {
+  var form = document.getElementById("myForm");
+
+  // check if name and email fields are filled in
+  if(form.name.value == "" || form.email.value == "") {
+    alert("Name and Email fields are required!");
+    return;
+  }
+
+  // check if email address is valid
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if(!emailRegex.test(form.email.value)) {
+    alert("Invalid email address!");
+    return;
+  }
+
+  var data = new FormData(form);
+  
+  fetch("https://script.google.com/macros/s/AKfycbwXtblh0zVtPM_f5dW4KNDHLnpgaT6eX31Gd6Z35Uqu8PwLhoVazqzI3-uGroxEVbx1Pg/exec", {
+    method: "POST",
+    body: data
+  })
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(text) {
+    console.log(text);
+    alert(text);
+  });
+}
+
+    </script>
