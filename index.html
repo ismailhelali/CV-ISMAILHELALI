@@ -1,258 +1,174 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="contact.css">
-    <title>CV - [Ismail Helali]</title>
+    <title>CV - Ismail Helali</title>
     <style>
-/* General styles */
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-}
-.values {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
+        /* Reset et mise en page A4 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            width: 210mm; /* Largeur A4 */
+            height: 297mm; /* Hauteur A4 */
+            margin: 0 auto;
+            padding: 20mm;
+            background: #fff;
+            color: #333;
+            line-height: 1.5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.values h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+        /* En-tête avec photo */
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 3px solid #007BFF;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #007BFF;
+        }
+        .header p {
+            font-size: 14px;
+            color: #555;
+        }
 
-.values li {
-  font-size: 24px;
-  list-style-type: none;
-  display: inline-block;
-  margin: 0 10px;
-}
-
-/* Flexbox container for header */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-}
-
-header h1 {
-  margin: 0;
-}
-
-header nav {
-  display: flex;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 14px;
-  transition: color 0.2s ease-out;
-}
-
-header nav a:hover {
-  color: #ddd;
-}
-
-/* CSS grid for main content */
-main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
-}
-
-/* Responsive styles using media queries */
-@media (max-width: 767px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Custom font for section headers */
-h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 18px;
-  margin: 20px 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Image hover effect */
-.item img {
-  width: 100%;
-  transition: transform 0.2s ease-out;
-}
-
-.item:hover img {
-  transform: scale(1.05);
-}
-
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
+        /* Sections */
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #007BFF;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .job-title {
+            font-weight: bold;
+            color: #333;
+        }
+        .company {
+            font-style: italic;
+            color: #666;
+        }
+        .date {
+            font-size: 12px;
+            color: #888;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .lang-grid {
+            display: flex;
+            gap: 20px;
+        }
     </style>
-  </head>
-  <body>
-
-  
-    <!-- En-tête -->
-    <header>
-      <h1>Ismail Helali</h1>
-      <nav>
-        <a href="#about">À propos</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projets</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-    <!-- Contenu principal -->
-    <main>
-      <!-- À propos -->
-      <section id="about">
-        <h2>À propos</h2>
-        <p>Je suis un ingénieur d'état en Génie Industriel diplômé en 2018 de l'École Supérieure des Industries de Textile et Habillement. J'ai également obtenu une Licence professionnelle en Supply Chain Management de la même école en 2014 et un Baccalauréat en Sciences Mathématiques en 2008. Je travaille actuellement en tant qu'Ingénieur Achat et Amélioration Continue chez SOLIDERNET SARL à Temara au Maroc et en tant que Développeur Web à temps partiel.</p>
-      </section>
-      <!-- Services -->
-      <section id="services">
-        <h2>Services</h2>
-        <ul>
-          <li>Génie industriel</li>
-          <li>Supply Chain Management</li>
-          <li>Développement web</li>
-          <li>Mathématiques appliquées</li>
-          <li>Analyse et résolution de problèmes</li>
-          <li>Design Of Experimente</li>
-          <li>Lean Six Sigma</li>
-          <li>DMAIC</li>
-          <li>SMED</li>
-          <li>Diagnostic Financier</li>
-          <li>Gestion de la Maintenance</li>
-          <li>Gestion des Achats et Sourcing</li>
-          <li>Gestion d'approvisionnement et des stocks</li>
-          <li>Gestion de la production</li>
-          <li>Étude des Projets en Textile et Habillement</li>
-          <li>Négociation et Diplomatie International</li>
-          <li>Dimensionnement Parc Auto ,Plate-forme Logistique ..etc</li>
-          <li>Prévisions des Ventes</li>
-   </ul>
-      </section>
-      <!-- Projets -->
-      <section id="projects">
-        <h2>Projets</h2>
-        <div class="item">
-          <img src="project1.jpg" alt="Projet 1">
-          <h3>Consultation Entreprise</h3>
-          <p>Nous sommes spécialisée dans les services de consultation et de diagnostic pour les entreprises de construction. Nous avons également mené des études de projets pour les usines de textile et d'habillement ainsi que des projets d'amélioration continue pour les entreprises de commerce et de distribution. Nous mettons notre expertise et notre expérience à votre disposition pour vous aider à atteindre vos objectifs d'affaires</p>
+</head>
+<body>
+    <div class="header">
+        <img src="ismail_photo.jpg" alt="Photo d'Ismail Helali">
+        <div>
+            <h1>Ismail Helali</h1>
+            <p>Ingénieur d’État en Génie Industriel – Supply Chain Manager</p>
+            <p>+212 677 146 992 | ismail.helali@esith.net | Maroc</p>
         </div>
-        <div class="item">
-          <img src="project2.jpg" alt="Projet 2">
-<h3>E-Learning</h3>
-          <p>Découvrez notre Chaîne YouTube Quality Podcast, où la connaissance est partagée avec passion. Nous sommes déterminés à fournir des informations de qualité sur des sujets tels que la qualité, la logistique, la production et le marketing. Rejoignez notre communauté en ligne pour accéder à des vidéos riches en contenu et en connaissances, et développez vos compétences dans ces domaines passionnants.</p>
-        </div>
-        <div class="item">
-          <img src="project3.jpg" alt="Projet 3">
-<h3>La poésie Marocain : Les Rimes de l'Esprit</h3>
-          <p>Découvrez notre livre de poésie marocain, riche en émotions et en spiritualité. Avec plus de 200 poèmes originaux, ce livre vous plonge dans le monde mystique et contemplatif de la poésie soufie. Chacun de nos poèmes a été soigneusement sélectionné pour vous offrir une expérience poétique unique et profonde. Ce livre est protégé par les droits d'auteur et est le fruit d'une créativité authentique et passionnée. Plongez dans ce monde poétique et laissez votre âme s'envoler.</p>
-        </div>
-<div class="item">
-          <img src="project3.jpg" alt="Projet 4">
-<h3>La Gestion du Flux Financiers</h3>
-          <p>Découvrez notre application de Gestiondu Flux financiers qui permet d'anticiper vos besoins de trésorerie et qui donne une vision a long terme sur l'état future de votre solde Bancaire , cela donne un pas de plus pour gérer vos approvisionnement , accélérer le recouvrement et planifier le paiement , l'application est Disponible en Format AppWeb avec une utilisation ergonomique et des fonctionnalités Pratiques, Vous n'aurait jamais besoin de verser de l'argent dans votre compte pour éviter les Chèques sans provision,  Notre application va vous alerter 3 mois en avance </p>
-        </div>
-      </section>
-      <!-- Contact -->
-      <section id="contact">
-<h2>Contact</h2>
-
-  <h3>Pour toute demande, n'hésitez pas à nous contacter.</h3>
-    <div class="contactform">
-        <form id="myForm">
-  <input type="text" placeholder="Nom et prénom" name="name"><br>
-  <input type="email" placeholder="Votre Email" name="email"><br>
-  <input type="tel" placeholder="Numéro de téléphone" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-  <label for="message">Votre Message</label><br>
-  <textarea name="message"></textarea><br>
-  
-
-   <input class="button" type="button" value="Envoyer" onclick="submitForm() ; clearForm()">
-        </form>
     </div>
 
-</section>
+    <section>
+        <h2>Objectif Professionnel</h2>
+        <p>Ingénieur en supply chain spécialisé dans l’optimisation des processus logistiques et industriels dans les secteurs de l’industrie et de la distribution, visant à améliorer l’efficacité via des solutions digitales.</p>
+    </section>
 
-<div class="values">
-  <h1>Mes Valeurs</h1>
-  <ul>
-    <li>Idée</li>
-    <li>Créativité</li>
-    <li>Efficience</li>
-    <li>Flexibilité</li>
-    <li>Réactivité</li>
-  </ul>
-</div>
+    <section>
+        <h2>Expérience Professionnelle</h2>
+        <p class="job-title">Supply Chain Manager</p>
+        <p class="company">SOLIDERNET SARL – Commerce de Distribution BtoB, Maroc</p>
+        <p class="date">Février 2018 – Aujourd’hui</p>
+        <ul>
+            <li>Réduction du temps de préparation des commandes de 30 à 15 min via une optimisation des emplacements produits.</li>
+            <li>Augmentation du niveau de service à +95% grâce à une politique d’approvisionnement claire.</li>
+            <li>Réduction des délais de livraison fournisseurs avec un suivi automatique.</li>
+            <li>Digitalisation des ordres d’approvisionnement, supprimant erreurs et émissions.</li>
+            <li>Automatisation du suivi du parc auto (vidange, entretien, carburant, etc.), optimisant la gestion.</li>
+            <li>Mise en conformité de l’entrepôt aux normes marocaines.</li>
+            <li>Renforcement de la présence digitale via des stratégies commerciales et marketing.</li>
+        </ul>
+    </section>
 
-</main>
-<!-- Pied de page -->
-<footer>
-<p>© Ismail Helali 2023</p>
-</footer>
+    <section>
+        <h2>Formation</h2>
+        <p class="job-title">Diplôme d’Ingénieur d’État en Génie Industriel</p>
+        <p class="company">ESITH, Casablanca, Maroc – Option : Textile et Habillement</p>
+        <p class="date">Février 2018</p>
+        <p class="job-title">Diplôme de Licence Professionnelle</p>
+        <p class="company">Spécialité : Gestion de la Chaîne Logistique</p>
+        <p class="date">2011 – 2014</p>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <ul>
+            <li>Google Garage – Digital Marketing (Fév. 2023)</li>
+            <li>SoloLearn – Web Development (Mars 2020)</li>
+            <li>Alison Academic – Food Safety (Mars 2020)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Compétences Techniques</h2>
+        <div class="skills-grid">
+            <ul>
+                <li>Supply Chain : Gestion d’achat, approvisionnement, MRP</li>
+                <li>Opérations : Équilibrage des postes, amélioration continue</li>
+                <li>Gestion : Projets, parc auto, prévisions des ventes</li>
+            </ul>
+            <ul>
+                <li>Marketing & Finance : Marketing digital, finance</li>
+                <li>Digital : HTML, CSS, JavaScript, Python, MySQL</li>
+                <li>Autres : Conformité normes, automatisation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Adaptation, Flexibilité, Résolution de problèmes</li>
+            <li>Leadership, Communication interculturelle</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Langues</h2>
+        <div class="lang-grid">
+            <p>Arabe, Français, Anglais : Lu, parlé, écrit</p>
+            <p>Espagnol : Débutant</p>
+        </div>
+    </section>
 </body>
 </html>
-<script>
-function clearForm() {
-    document.getElementById("myForm").reset();
-}  
-  
-  
-function submitForm() {
-  var form = document.getElementById("myForm");
-
-  // check if name and email fields are filled in
-  if(form.name.value == "" || form.email.value == "") {
-    alert("Name and Email fields are required!");
-    return;
-  }
-
-  // check if email address is valid
-  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  if(!emailRegex.test(form.email.value)) {
-    alert("Invalid email address!");
-    return;
-  }
-
-  var data = new FormData(form);
-  
-  fetch("https://script.google.com/macros/s/AKfycbwXtblh0zVtPM_f5dW4KNDHLnpgaT6eX31Gd6Z35Uqu8PwLhoVazqzI3-uGroxEVbx1Pg/exec", {
-    method: "POST",
-    body: data
-  })
-  .then(function(response) {
-    return response.text();
-  })
-  .then(function(text) {
-    console.log(text);
-    alert(text);
-  });
-}
-
-    </script>
