@@ -4,67 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Ismail Helali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset et mise en page A4 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: 'Arial', sans-serif;
-            width: 210mm; /* Largeur A4 */
-            height: 297mm; /* Hauteur A4 */
+            font-family: 'Roboto', sans-serif;
+            width: 210mm;
+            height: 297mm;
             margin: 0 auto;
-            padding: 20mm;
-            background: #fff;
+            padding: 15mm;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
-            line-height: 1.5;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* En-tête avec photo */
-        .header {
+            line-height: 1.6;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             display: flex;
-            align-items: center;
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .header img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 15px;
-            object-fit: cover;
-            border: 3px solid #007BFF;
-        }
-        .header h1 {
-            font-size: 24px;
-            color: #007BFF;
-        }
-        .header p {
-            font-size: 14px;
-            color: #555;
         }
 
-        /* Sections */
+        /* Conteneur principal */
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Barre latérale */
+        .sidebar {
+            width: 35%;
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px 0 0 10px;
+        }
+        .sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 3px solid #fff;
+        }
+        .sidebar h1 {
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .sidebar p {
+            font-size: 12px;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        /* Contenu principal */
+        .main-content {
+            width: 65%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+        }
         section {
             margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        section:hover {
+            transform: translateY(-2px);
         }
         h2 {
-            font-size: 18px;
+            font-size: 16px;
             color: #007BFF;
-            border-bottom: 1px solid #ddd;
+            text-transform: uppercase;
+            border-bottom: 2px solid #007BFF;
             padding-bottom: 5px;
             margin-bottom: 10px;
+            font-weight: 700;
         }
         ul {
             list-style: none;
         }
         ul li {
+            font-size: 13px;
             margin-bottom: 5px;
-            font-size: 14px;
+            position: relative;
+            padding-left: 15px;
+        }
+        ul li:before {
+            content: "•";
+            color: #007BFF;
+            position: absolute;
+            left: 0;
         }
         .job-title {
             font-weight: bold;
@@ -75,100 +105,114 @@
             color: #666;
         }
         .date {
-            font-size: 12px;
+            font-size: 11px;
             color: #888;
         }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+        .skills-grid, .lang-grid {
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
         }
-        .lang-grid {
-            display: flex;
-            gap: 20px;
+        .skills-grid li, .lang-grid li {
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+        .sidebar .skills-grid li, .sidebar .lang-grid li {
+            background: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="ismail_photo.jpg" alt="Photo d'Ismail Helali">
-        <div>
+    <div class="container">
+        <!-- Barre latérale -->
+        <div class="sidebar">
+            <img src="ismail_photo.jpg" alt="Photo d'Ismail Helali">
             <h1>Ismail Helali</h1>
-            <p>Ingénieur d’État en Génie Industriel – Supply Chain Manager</p>
-            <p>+212 677 146 992 | ismail.helali@esith.net | Maroc</p>
+            <p>Ingénieur d’État en Génie Industriel</p>
+            <p>Supply Chain Manager</p>
+            <p>+212 677 146 992</p>
+            <p>ismail.helali@esith.net</p>
+            <p>Maroc</p>
+
+            <section>
+                <h2>Compétences Techniques</h2>
+                <ul class="skills-grid">
+                    <li>Gestion d’achat & MRP</li>
+                    <li>Approvisionnement</li>
+                    <li>Amélioration continue</li>
+                    <li>Gestion de projets</li>
+                    <li>Marketing digital</li>
+                    <li>HTML, CSS, Python</li>
+                    <li>Automatisation</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Adaptation</li>
+                    <li>Flexibilité</li>
+                    <li>Résolution de problèmes</li>
+                    <li>Leadership</li>
+                    <li>Communication interculturelle</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Langues</h2>
+                <ul class="lang-grid">
+                    <li>Arabe : Courant</li>
+                    <li>Français : Courant</li>
+                    <li>Anglais : Courant</li>
+                    <li>Espagnol : Débutant</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="main-content">
+            <section>
+                <h2>Objectif Professionnel</h2>
+                <p>Ingénieur en supply chain spécialisé dans l’optimisation des processus logistiques et industriels dans les secteurs de l’industrie et de la distribution, visant à améliorer l’efficacité via des solutions digitales.</p>
+            </section>
+
+            <section>
+                <h2>Expérience Professionnelle</h2>
+                <p class="job-title">Supply Chain Manager</p>
+                <p class="company">SOLIDERNET SARL – Commerce de Distribution BtoB, Maroc</p>
+                <p class="date">Février 2018 – Aujourd’hui</p>
+                <ul>
+                    <li>Réduction du temps de préparation des commandes de 30 à 15 min via une optimisation des emplacements.</li>
+                    <li>Augmentation du niveau de service à +95% grâce à une politique d’approvisionnement claire.</li>
+                    <li>Réduction des délais de livraison avec un suivi automatique.</li>
+                    <li>Digitalisation des ordres d’approvisionnement, supprimant erreurs et émissions.</li>
+                    <li>Automatisation du suivi du parc auto, optimisant la gestion.</li>
+                    <li>Mise en conformité de l’entrepôt aux normes marocaines.</li>
+                    <li>Renforcement de la présence digitale via marketing et communication.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Formation</h2>
+                <p class="job-title">Diplôme d’Ingénieur d’État en Génie Industriel</p>
+                <p class="company">ESITH, Casablanca – Option : Textile et Habillement</p>
+                <p class="date">Février 2018</p>
+                <p class="job-title">Diplôme de Licence Professionnelle</p>
+                <p class="company">Spécialité : Gestion de la Chaîne Logistique</p>
+                <p class="date">2011 – 2014</p>
+            </section>
+
+            <section>
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Google Garage – Digital Marketing (Fév. 2023)</li>
+                    <li>SoloLearn – Web Development (Mars 2020)</li>
+                    <li>Alison Academic – Food Safety (Mars 2020)</li>
+                </ul>
+            </section>
         </div>
     </div>
-
-    <section>
-        <h2>Objectif Professionnel</h2>
-        <p>Ingénieur en supply chain spécialisé dans l’optimisation des processus logistiques et industriels dans les secteurs de l’industrie et de la distribution, visant à améliorer l’efficacité via des solutions digitales.</p>
-    </section>
-
-    <section>
-        <h2>Expérience Professionnelle</h2>
-        <p class="job-title">Supply Chain Manager</p>
-        <p class="company">SOLIDERNET SARL – Commerce de Distribution BtoB, Maroc</p>
-        <p class="date">Février 2018 – Aujourd’hui</p>
-        <ul>
-            <li>Réduction du temps de préparation des commandes de 30 à 15 min via une optimisation des emplacements produits.</li>
-            <li>Augmentation du niveau de service à +95% grâce à une politique d’approvisionnement claire.</li>
-            <li>Réduction des délais de livraison fournisseurs avec un suivi automatique.</li>
-            <li>Digitalisation des ordres d’approvisionnement, supprimant erreurs et émissions.</li>
-            <li>Automatisation du suivi du parc auto (vidange, entretien, carburant, etc.), optimisant la gestion.</li>
-            <li>Mise en conformité de l’entrepôt aux normes marocaines.</li>
-            <li>Renforcement de la présence digitale via des stratégies commerciales et marketing.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Formation</h2>
-        <p class="job-title">Diplôme d’Ingénieur d’État en Génie Industriel</p>
-        <p class="company">ESITH, Casablanca, Maroc – Option : Textile et Habillement</p>
-        <p class="date">Février 2018</p>
-        <p class="job-title">Diplôme de Licence Professionnelle</p>
-        <p class="company">Spécialité : Gestion de la Chaîne Logistique</p>
-        <p class="date">2011 – 2014</p>
-    </section>
-
-    <section>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Google Garage – Digital Marketing (Fév. 2023)</li>
-            <li>SoloLearn – Web Development (Mars 2020)</li>
-            <li>Alison Academic – Food Safety (Mars 2020)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Compétences Techniques</h2>
-        <div class="skills-grid">
-            <ul>
-                <li>Supply Chain : Gestion d’achat, approvisionnement, MRP</li>
-                <li>Opérations : Équilibrage des postes, amélioration continue</li>
-                <li>Gestion : Projets, parc auto, prévisions des ventes</li>
-            </ul>
-            <ul>
-                <li>Marketing & Finance : Marketing digital, finance</li>
-                <li>Digital : HTML, CSS, JavaScript, Python, MySQL</li>
-                <li>Autres : Conformité normes, automatisation</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Soft Skills</h2>
-        <ul>
-            <li>Adaptation, Flexibilité, Résolution de problèmes</li>
-            <li>Leadership, Communication interculturelle</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Langues</h2>
-        <div class="lang-grid">
-            <p>Arabe, Français, Anglais : Lu, parlé, écrit</p>
-            <p>Espagnol : Débutant</p>
-        </div>
-    </section>
 </body>
 </html>
